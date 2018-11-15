@@ -15,7 +15,7 @@ const options = {
       name: "CFBX 92.5FM - The X Campus & Community Radio",
       singer: "CFBX 92.5FM",
       cover: "https://cfbxsite.files.wordpress.com/2017/07/cropped-screen-shot-2017-07-27-at-10-12-33-pm.png",
-      musicSrc: "http://thexaudio.tru.ca:8002/;?type=http&nocache=641025"
+      musicSrc: "http://thexaudio.tru.ca:8002/listen.pls?sid=1"
     }
   ],
 
