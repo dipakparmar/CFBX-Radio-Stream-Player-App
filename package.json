@@ -19,7 +19,7 @@
     "coverage": "yarn test -- --coverage",
     "ci": "yarn coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit": "lint-staged",
-    "prepublish": "npm run build"
+    "prepublish": "npm run buildnpmv"
   },
   "pre-commit": "lint",
   "lint-staged": {
