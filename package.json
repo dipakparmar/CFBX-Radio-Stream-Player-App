@@ -4,22 +4,20 @@
   "description": "CFBX 92.5FM Radio App",
   "main": "lib/index.js",
   "scripts": {
-    "start": "yarn demo",
+    "start": "npm run demo",
     "build:clean": "rimraf lib && rimraf assets",
     "lint": "prettier --write \"src/**/*.js\" && eslint_d --fix src",
     "auto": "postcss -u autoprefixer -c postcss.config.json --no-map -o assets/index.css  assets/index.css",
-    "build:css": "lessc src/styles/index.less assets/index.css && yarn auto",
-    "buildnpmv:css": "lessc src/styles/index.less assets/index.css && npm run auto",
+    "build:css": "lessc src/styles/index.less assets/index.css && npm run auto",
     "build:js": "babel src -d lib",
-    "buildnpmv": "npm run build:clean && npm run build:js && npm run buildnpmv:css",
-    "build": "yarn build:clean && yarn build:js && yarn build:css",
+    "build": "npm run build:clean && npm run build:js && npm run build:css",
     "build:demo": "webpack --env.mode=PROD --progress --config  ./example/webpack.config.js",
     "demo": "webpack-dev-server --progress --inline --hot --config  ./example/webpack.config.js",
     "test": "jest __tests__/tests",
-    "coverage": "yarn test -- --coverage",
-    "ci": "yarn coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "npm run test -- --coverage",
+    "ci": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "precommit": "lint-staged",
-    "prepublish": "npm run buildnpmv"
+    "prepublish": "npm run build"
   },
   "pre-commit": "lint",
   "lint-staged": {
