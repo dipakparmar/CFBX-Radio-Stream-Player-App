@@ -11,7 +11,7 @@
     "build:css": "lessc src/styles/index.less assets/index.css && yarn auto",
     "buildnpmv:css": "lessc src/styles/index.less assets/index.css && npm run auto",
     "build:js": "babel src -d lib",
-    "buildnpmv": "npm run build:clean && npm run build:js && npm run build:css",
+    "buildnpmv": "npm run build:clean && npm run build:js && npm run buildnpmv:css",
     "build": "yarn build:clean && yarn build:js && yarn build:css",
     "build:demo": "webpack --env.mode=PROD --progress --config  ./example/webpack.config.js",
     "demo": "webpack-dev-server --progress --inline --hot --config  ./example/webpack.config.js",
